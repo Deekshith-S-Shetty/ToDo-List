@@ -70,7 +70,7 @@ app.post("/", function (req, res) {
   });
 
   if(listName === date.dateName()) {
-    item.save()
+    item.save();
     res.redirect("/");
   } else {
     List.findOne({name: listName}, function(err, foundList) {
@@ -124,6 +124,6 @@ app.get("/:customListName", function (req, res) {
   });
 });
 
-app.listen(3000, function () {
+app.listen(app.listen(process.env.PORT) || 3000, function () {
   console.log("server is running at port 3000");
 });
