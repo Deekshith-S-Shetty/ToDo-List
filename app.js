@@ -124,6 +124,6 @@ app.get("/:customListName", function (req, res) {
   });
 });
 
-app.listen(app.listen(process.env.PORT) || 3000, function () {
+app.listen(app.listen(process.env.PORT), function () {
   console.log("server is running at port 3000");
 });
